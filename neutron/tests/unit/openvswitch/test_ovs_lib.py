@@ -598,7 +598,7 @@ class OVS_Lib_Test(base.BaseTestCase):
         br = 'br-int'
         root_helper = 'sudo'
         exp_timeout_str = self._build_timeout_opt(exp_timeout)
-	utils.execute(["ovs-vsctl", exp_timeout_str, "iface-to-br", iface],
+        utils.execute(["ovs-vsctl", exp_timeout_str, "iface-to-br", iface],
                       root_helper=root_helper).AndReturn('br-int')
 
         self.mox.ReplayAll()
@@ -650,7 +650,7 @@ class OVS_Lib_Test(base.BaseTestCase):
         bridges = ['br-int', 'br-ex']
         root_helper = 'sudo'
         timeout_str = self._build_timeout_opt(exp_timeout)
-	utils.execute(["ovs-vsctl", timeout_str, "list-br"],
+        utils.execute(["ovs-vsctl", timeout_str, "list-br"],
                       root_helper=root_helper).AndReturn('br-int\nbr-ex\n')
 
         self.mox.ReplayAll()
